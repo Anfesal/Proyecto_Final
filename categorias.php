@@ -34,12 +34,10 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item ">
                 <?php 
-                    if (isset($_SESSION['auth']) || $_SESSION['auth']==true) { ?>
+                    if (!isset($_SESSION['auth']) || $_SESSION['auth']==true) { ?>
                             <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                     <?php }
-                    else { ?>
-                            <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                    <?php } 
+                    
                 ?>
                 </li>
                 <li class="nav-item active">
@@ -63,7 +61,6 @@
             <br><br>
             <?php 
                
-
                 if (!isset($_SESSION['auth']) || $_SESSION['auth']==true) { ?>
                      <button type="button"  class="btn btn-info btn-md" ><?php print($_SESSION['user']); ?></button>
                      <a href="control_salir.php" class="btn btn-outline-primary">Salir</a>              
@@ -143,15 +140,15 @@
 
                                 </div>
                                 <div class="modal-body">
-                                    <form id="login-form" method="post" role="form" style="display: block;">
+                                    <form id="login-form" method="POST" role="form" style="display: block;" action="registro.php">
                                         <div class="form-group">
                                             <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                            <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Repetir contraseña">
+                                            <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
                                         </div>
                                         <div class="form-group text-center">
                                             <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -180,11 +177,7 @@
                     </div>
                 <?php } 
             ?>
-
-         
-           
-       
-            
+   
         </div>
     </nav>
 

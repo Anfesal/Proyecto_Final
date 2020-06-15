@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['auth']) || $_SESSION['auth']==false ){
+		$_SESSION['auth']= false;
+    } 
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +32,12 @@
             <a class="navbar-brand" href="index.php"><img src="img/logo.PNG" alt="" width="113" height="64"></a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                <?php 
+                    if (!isset($_SESSION['auth']) || $_SESSION['auth']==true) { ?>
+                            <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
+                    <?php }
+                    
+                ?>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="categorias.php">Productos <span class="sr-only">(current)</span></a>
@@ -46,109 +58,124 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
             <br><br>
-            <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Ingresa</button>
+            <?php 
+               
+                if (!isset($_SESSION['auth']) || $_SESSION['auth']==true) { ?>
+                     <button type="button"  class="btn btn-info btn-md" ><?php print($_SESSION['user']); ?></button>
+                     <a href="control_salir.php" class="btn btn-outline-primary">Salir</a>              
+                <?php } 
 
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
+                else { ?>
+                    <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Ingresa</button>
+                    
+                    <!-- Modal -->
+                    <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Iniciar Sesión</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Iniciar Sesión</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                        </div>
-                        <div class="modal-body">
-                            <form id="login-form" method="post" role="form" style="display: block;">
-                                <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                                <div class="modal-body">
+                                    <form id="login-form" method="POST" role="form" style="display: block;" action="control_sesion.php">
+                                    <?php
+                                        if(isset($_GET['error']) && $_GET['error']==true ){
+                                        print("<h4>Error:Nombre de usuario o contraseña invalido</h4><br>");
+                                            }
+                                    ?>
+                                        <div class="form-group">
+                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                            <label for="remember"> Recordarme</label>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="text-center">
+                                                        <button type="submit" name="enviar_i" class="btn btn-primary">Iniciar Sesión</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
 
 
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="#" tabindex="5" class="forgot-password">¿Has olvidado tu contraseña?</a>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="text-center">
+                                                        <a href="#" tabindex="5" class="forgot-password">¿Has olvidado tu contraseña?</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
-                </div>
-            </div>
+                    <button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal1">Registrarse ahora</button>
+                    <!-- Modal -->
+                    <div id="myModal1" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
 
-            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal1">Registrarse ahora</button>
-            <!-- Modal -->
-            <div id="myModal1" class="modal fade" role="dialog">
-                <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Registro</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Registro</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-
-                        </div>
-                        <div class="modal-body">
-                            <form id="login-form" method="post" role="form" style="display: block;">
-                                <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
                                 </div>
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Repetir contraseña">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <button type="submit" class="btn btn-primary">Registrarme</button>
+                                <div class="modal-body">
+                                    <form id="login-form" method="POST" role="form" style="display: block;" action="registro.php">
+                                        <div class="form-group">
+                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                            <label for="remember"> Recordarme</label>
+                                        </div>
+                                        <div class="form-group ">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="text-center">
+                                                        <button type="submit" class="btn btn-primary">Registrarme</button>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+
+
+
+                                    </form>
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
 
-
-
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
                     </div>
-
-                </div>
-            </div>
+                <?php } 
+            ?>
         </div>
     </nav>
 

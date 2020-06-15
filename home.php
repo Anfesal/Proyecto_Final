@@ -109,6 +109,9 @@ session_start();
     </div>
 
     <div class="container">
+    <div class="ofert">
+            <h4> <b> Bienvenido <?php print($_SESSION['user']); ?> a tu Tienda Virtual BANDSTORE</b></h4>
+        </div>
         <div class="ofert">
             <h4> <b> PRODUCTOS EN OFERTAS</b></h4>
         </div>

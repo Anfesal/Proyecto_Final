@@ -120,15 +120,15 @@
 
                         </div>
                         <div class="modal-body">
-                            <form id="login-form" method="post" role="form" style="display: block;">
+                            <form id="login-form" method="POST" role="form" style="display: block;" action="registro.php">
                                 <div class="form-group">
                                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                    <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Repetir contraseña">
+                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
                                 </div>
                                 <div class="form-group text-center">
                                     <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
