@@ -15,15 +15,31 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+let desplazamiento_Actual=900;
+let ubicacionPrincipal = window.pageYOffset;
+window.onscroll = function(){
+   desplazamiento_Actual=window.pageYOffset;
+   if(ubicacionPrincipal>=desplazamiento_Actual){
+       document.getElementById("nav-a").style.top="0";
+    }
+    else{
+         document.getElementById("nav-a").style.top="-100px";
+
+    }
+    ubicacionPrincipal=desplazamiento_Actual;
+}
+</script>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="nav-a" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <a class="navbar-brand" href="index.php"><img src="img/logo.PNG" alt="" width="113" height="64"></a>
+            <a class="navbar-brand" href="index.php"><img src="img/log2.PNG" alt="" width="113" height="64"></a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                
                 <li class="nav-item ">
