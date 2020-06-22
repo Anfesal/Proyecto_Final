@@ -15,6 +15,23 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=true" async defer></script>
+    <script type="text/javascript" src="codigo.js"></script>
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <style type="text/css">
+        #mapa {
+            width: 100%;
+            height: 180%;
+        }
+         footer{
+            background-color: rgb(192, 189, 189);
+            color: black;
+         }
+        
+    </style>
+  
+
 <script type="text/javascript">
 let desplazamiento_Actual=900;
 let ubicacionPrincipal = window.pageYOffset;
@@ -57,10 +74,7 @@ window.onscroll = function(){
 
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            
             <br><br>
             <button type="button"  href="index.php?ese=23" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Ingresa</button>
             
@@ -85,14 +99,10 @@ window.onscroll = function(){
                                     }
                             ?>
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
+                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña" required>
                                 </div>
                                 <div class="form-group ">
                                     <div class="row">
@@ -103,17 +113,7 @@ window.onscroll = function(){
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="#" tabindex="5" class="forgot-password">¿Has olvidado tu contraseña?</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -139,18 +139,18 @@ window.onscroll = function(){
                         <div class="modal-body">
                             <form id="login-form" method="POST" role="form" style="display: block;" action="registro.php">
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                    <input type="text" name="nombre" id="name" tabindex="1" class="form-control" placeholder="Nombre" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                    <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo" required>
                                 </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
+                                <div class="form-group">
+                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña" required>
                                 </div>
+                                
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-lg-12">
@@ -642,11 +642,13 @@ window.onscroll = function(){
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-6 text-left">
-                    <h6 class="text-muted lead">CONTACTO:</h6>
-                    <h6 class="text-muted">
-                        Calle 65 #55-30<br> Barrio Chagualo.<br> Medellín, Antioquia. <br> Teléfono: 3182044125.<br>
-                    </h6>
+               
+                    <div id="mapa"></div>
+                    <div id="ubicacion"></div>
+                
                 </div>
+
+               
 
                 <div class="col-xs-12 col-md-6 text-right">
                     <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>

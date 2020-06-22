@@ -5,13 +5,18 @@ function verificarUsuario(){
 
 	$mysql = conexionSQL();
 
-	$q =("SELECT * FROM clientes WHERE user='".$_POST['username']."' AND pass ='".$_POST['contrasena']."'");
+	$q =("SELECT * FROM clientes WHERE user='".$_POST['username']."' AND pass ='".$_POST['contrasena']."' ");
 	$Users = $mysql->query($q);
+	$u= ("SELECT names FROM clientes WHERE user='".$_POST['username']."'");
+	$nomb = $mysql->query($u);
+	$nombre = mysqli_fetch_row($nomb);
 	print($q);
+	echo $nombre[0];
 	if(mysqli_num_rows($Users)!=0){
 
 		session_start();
 			$_SESSION['user']= $_POST['username'];
+			$_SESSION['names']= $nombre[0];
 			$_SESSION['auth']= true;
 	}else{
 		print("no hay usuarios");
@@ -25,7 +30,7 @@ function verificarUsuario(){
 	header("Location:home.php");
 	}else{
 		print("no existe");
-		header("Location:index.php?error=true");
+	//	header("Location:index.php?ese=23");
 	}
 }
 	?>
