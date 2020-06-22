@@ -39,7 +39,7 @@ window.onscroll = function(){
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="index.php"></a>
-        <div id="ensayo" class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                
