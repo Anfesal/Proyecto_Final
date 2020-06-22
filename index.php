@@ -73,10 +73,7 @@ window.onscroll = function(){
 
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            
             <br><br>
             <button type="button"  href="index.php?ese=23" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Ingresa</button>
             
@@ -101,14 +98,10 @@ window.onscroll = function(){
                                     }
                             ?>
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
-                                </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
+                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña" required>
                                 </div>
                                 <div class="form-group ">
                                     <div class="row">
@@ -119,17 +112,7 @@ window.onscroll = function(){
                                         </div>
                                     </div>
                                 </div>
-
-
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="#" tabindex="5" class="forgot-password">¿Has olvidado tu contraseña?</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </form>
                         </div>
                         <div class="modal-footer">
@@ -155,18 +138,18 @@ window.onscroll = function(){
                         <div class="modal-body">
                             <form id="login-form" method="POST" role="form" style="display: block;" action="registro.php">
                                 <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="">
+                                    <input type="text" name="nombre" id="name" tabindex="1" class="form-control" placeholder="Nombre" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña">
+                                    <input type="email" name="correo" id="email" tabindex="2" class="form-control" placeholder="Correo" required>
                                 </div>
-                                <div class="form-group text-center">
-                                    <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
-                                    <label for="remember"> Recordarme</label>
+                                <div class="form-group">
+                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña" required>
                                 </div>
+                                
                                 <div class="form-group ">
                                     <div class="row">
                                         <div class="col-lg-12">

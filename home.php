@@ -27,7 +27,6 @@ session_start();
     <script src="https://maps.googleapis.com/maps/api/js?sensor=true" async defer></script>
     <script type="text/javascript" src="codigo.js"></script>
 
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <style type="text/css">
         #mapa {
             width: 100%;
@@ -37,8 +36,21 @@ session_start();
             background-color: rgb(192, 189, 189);
             color: black;
          }
+         .Bda {
+             padding-top: 40px;
+        }
+         .bienvenida {
+             padding: 120px;
+            padding-bottom: 10px;
+            text-align: center;
+            padding-top: 15px;
+            height: 70px;
+             background-color: rgba(224, 129, 129, 0.993);
+            color: black;
+        }
         
     </style>
+    
 </head>
 
 <body>
@@ -66,10 +78,7 @@ session_start();
 
             </ul>
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-            </form>
+            
             <br><br>
             <button type="button"  class="btn btn-info btn-md" ><?php print($_SESSION['user']); ?></button>
             <a href="control_salir.php" class="btn btn-outline-primary">Salir</a>            
@@ -124,9 +133,11 @@ session_start();
     </div>
 
     <div class="container">
-    <div class="ofert">
-            <h4> <b> Bienvenido <?php print($_SESSION['user']); ?> a tu Tienda Virtual BANDSTORE</b></h4>
-        </div>
+        <div class="Bda">
+            <div class="bienvenida">
+                <h4> <b> Bienvenido <?php print($_SESSION['names']); ?> a tu Tienda Virtual BANDSTORE</b></h4>
+            </div>
+        </div>    
         <div class="ofert">
             <h4> <b> PRODUCTOS EN OFERTAS</b></h4>
         </div>
