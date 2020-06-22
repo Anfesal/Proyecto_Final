@@ -54,3 +54,27 @@ footer {
     display: flex;
     margin: 0 auto;
 }
+
+.navbar-brand{
+list-style-type:none;
+width:97px;
+height:82px;
+margin-left:5%;
+background-image:url("../img/doble.png");
+float:left;
+display:inline-block;
+}
+
+
+#nav-a{
+background-color:purple;
+transition:top 1s;
+}
+
+#nav-a:hover{
+background-color:gray;
+
+}
+#nav-a:hover > .navbar-brand{
+background-position:-98px 0px;
+}
