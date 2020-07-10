@@ -24,7 +24,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=true" async defer></script>
     <script type="text/javascript" src="codigo.js"></script>
-
+    <script type="text/javascript" src="carro.js"></script>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <style type="text/css">
         #mapa {
@@ -37,6 +37,12 @@
          }
         
     </style>
+      <script>
+        let carrito = [];
+        let total = 0;
+        localStorage.c;
+        
+    </script>
 </head>
 
 <body>
@@ -278,7 +284,7 @@
                         </ul>
                         <label>Cantidad</label>
                         <input type="text" name="CANTIDAD" size="3" required>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <button  class="btn btn-primary" onclick="carFunction(7)" >Añadir al carro</button>
                     </div>
                 </div>
             </div>

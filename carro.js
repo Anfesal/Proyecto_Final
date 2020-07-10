@@ -57,7 +57,10 @@ function carFunction(marcador) {
 
             let miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - ${miItem[0]['precio']}€`;
+            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - ${miItem[0]['precio']}`;
+
+
+
             // Boton de borrar
             let miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -67,7 +70,8 @@ function carFunction(marcador) {
             miBoton.addEventListener('click', borrarItemCarrito);
 
             miNodo.appendChild(miBoton);
-            $carrito.appendChild(miNodo);
+            localStorage.b = $carrito.appendChild(miNodo);
+
         })
     }
 
