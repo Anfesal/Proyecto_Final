@@ -40,6 +40,13 @@
       <script>
         let carrito = [];
         let total = 0;
+        let cont_bt = 0;
+        let cont_bt2 = 0;
+        let cont_bt3 = 0;
+        let cont_bt4 = 0;
+        let cont_bt5 = 0;
+
+        let cont_btt = 0;
         localStorage.c;
         
     </script>
@@ -239,6 +246,23 @@
             <hr>
         </div>
         <br>
+    <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-12 row"></main>
+            <!-- Carrito -->
+            <aside class="col-md-6">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span></p>
+            </aside>
+        </div>
+    </div>
+    <br>
+        <br>
         <div class="card w-100">
             <div class="row">
                 <div class="col-md-4">
@@ -270,6 +294,7 @@
                     </div>
 
                 </div>
+                
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">ADAPTADOR RECEPTOR BLUETOOTH</h5>
@@ -282,9 +307,10 @@
                             <li>Se convierte en Manos Libres bluetooth con altavoz.</li>
                             <li>Diseñado para cualquier aparato de tu casa que no tenga bluetooth , equipos de sonido estéreo, auriculares, radios, grabadores, altavoces del automóvil y motocicleta.</li>
                         </ul>
-                        <label>Cantidad</label>
-                        <input type="text" name="CANTIDAD" size="3" required>
-                        <button  class="btn btn-primary" onclick="carFunction(7)" >Añadir al carro</button>
+                        
+                        <button  class="btn btn-primary" onclick="carFunction(7,'#a1')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a1"> </a>
+                        
                     </div>
                 </div>
             </div>
@@ -334,9 +360,8 @@
                             <li>Posee SD y AUX.</li>
                             <li>Posee lampara LED que cambia de color.</li>
                         </ul>
-                        <label>Cantidad</label>
-                        <input type="text" name="CANTIDAD" size="3" required>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <button  class="btn btn-primary" onclick="carFunction(8,'#a2')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a2"> </a>
                     </div>
                 </div>
             </div>
@@ -360,9 +385,8 @@
                             <li>Enchufar en plafon de bombilla.</li>
 
                         </ul>
-                        <label>Cantidad</label>
-                        <input type="text" name="CANTIDAD" size="3" required>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <button  class="btn btn-primary" onclick="carFunction(9,'#a3')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a3"> </a>
                     </div>
                 </div>
             </div>
@@ -386,9 +410,8 @@
                             <li>Vida util de 50.000 horas</li>
 
                         </ul>
-                        <label>Cantidad</label>
-                        <input type="text" name="CANTIDAD" size="3" required>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <button  class="btn btn-primary" onclick="carFunction(10,'#a4')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a4"> </a>
                     </div>
                 </div>
             </div>
@@ -415,28 +438,11 @@
                             <li>Con una caja de cargador Inteligente, es una caja de almacenamiento, así como un cargador. Colocas el auricular y cierras la tapa, cargarás los auriculares</li>
 
                         </ul>
-                        <label>Cantidad</label>
-                        <input type="text" name="CANTIDAD" size="3" required>
-                        <a href="#" class="btn btn-primary">Comprar</a>
+                        <button  class="btn btn-primary" onclick="carFunction(11,'#a5')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a5"> </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <br>
-    <div class="container">
-        <div class="row">
-            <!-- Elementos generados a partir del JSON -->
-            <main id="items" class="col-sm-8 row"></main>
-            <!-- Carrito -->
-            <aside class="col-sm-4">
-                <h2>Carrito</h2>
-                <!-- Elementos del carrito -->
-                <ul id="carrito" class="list-group"></ul>
-                <hr>
-                <!-- Precio total -->
-                <p class="text-right">Total: <span id="total"></span></p>
-            </aside>
         </div>
     </div>
     <br>

@@ -26,6 +26,7 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://maps.googleapis.com/maps/api/js?sensor=true" async defer></script>
     <script type="text/javascript" src="codigo.js"></script>
+    <script type="text/javascript" src="carro.js"></script>
 
     <style type="text/css">
         #mapa {
@@ -50,6 +51,12 @@ session_start();
         }
         
     </style>
+    <script>
+        let carrito = [];
+        let total = 0;
+        localStorage.c;
+        
+    </script>
     
 </head>
 
@@ -138,6 +145,25 @@ session_start();
                 <h4> <b> Bienvenido <?php print($_SESSION['names']); ?> a tu Tienda Virtual BANDSTORE</b></h4>
             </div>
         </div>    
+
+        <br>
+    <div class="container">
+        <div class="row">
+            <!-- Elementos generados a partir del JSON -->
+            <main id="items" class="col-sm-12 row"></main>
+            <!-- Carrito -->
+            <aside class="col-md-6">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span></p>
+            </aside>
+        </div>
+    </div>
+    <br>
+
         <div class="ofert">
             <h4> <b> PRODUCTOS EN OFERTAS</b></h4>
         </div>
@@ -180,9 +206,7 @@ session_start();
                                                 <li>Ideal para llevar tus bebidas.</li>
                                                 <li>Diseño lente de cámara.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(1)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -233,9 +257,7 @@ session_start();
                                                 <li>Material: Plástico</li>
 
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(2)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -316,9 +338,7 @@ session_start();
                                                 <li>Diseño único.</li>
 
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(3)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -402,9 +422,7 @@ session_start();
                                                 <li>Buena calidad.</li>
                                                 <li>No incluye base de madera ella se sostiene sola.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(4)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -454,9 +472,7 @@ session_start();
                                                 <li>Muy buenos acabados, que le dan realismo a la imagen.</li>
                                                 <li>Alta calidad.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(5)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -533,9 +549,7 @@ session_start();
                                                 <li>Diseño en acero inoxidable.</li>
                                                 <li>Excelente calidad.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(6)" >Añadir al carro</button>
 
                                         </div>
                                     </div>

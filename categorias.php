@@ -333,7 +333,7 @@
                         <p class="card-text">Este steampunk calavera taza de café está hecho de resina de alta calidad con acero inoxidable pintado a mano individualmente.</p>
                         <hr>
                         <p class="precio_cat">$32.000</p>
-                        <a href="#" class="btn btn-primary">Ver mas</a>
+                        <a href="gadgets.php" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>
             </div>
@@ -350,7 +350,7 @@
                         <p class="card-text">Taza Ideal para entusiastas de la fotografía con un diseño exclusivo que simula el lente de la Canon EF 24-105 mm f / 4L IS USM. Cuenta con una tapa multipropósito que ayuda a mantener las bebidas calientes en todo momento.</p>
                         <hr>
                         <p class="precio_cat">$25.000</p>
-                        <a href="#" class="btn btn-primary">Ver mas</a>
+                        <a href="gadgets.php" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>
             </div>
@@ -367,7 +367,7 @@
                         <p class="card-text"> LAMPARA DE MEJOR CALIDAD en Biopolimero PLA por impresion 3D (Material BIODEGRADABLE amigable con el medio ambiente).</p>
                         <hr>
                         <p class="precio_cat">$25.000</p>
-                        <a href="#" class="btn btn-primary">Ver mas</a>
+                        <a href="gadgets.php" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>
             </div>
@@ -384,7 +384,7 @@
                         <p class="card-text">Voltear,girar y girar el perplexo, intentando mover un balón a lo largo de los caminos numerados, mientras trabajas con y contra las fuerzas de la gravedad.</p>
                         <hr>
                         <p class="precio_cat">$18.000</p>
-                        <a href="#" class="btn btn-primary">Ver mas</a>
+                        <a href="gadgets.php" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>
             </div>
@@ -401,7 +401,7 @@
                         <p class="card-text"> Llavero metálico GUANTE THANOS de Marvel Cómics, elaborado en Aleación de zinc resistentes a posibles quiebres.</p>
                         <hr>
                         <p class="precio_cat">$16.000</p>
-                        <a href="#" class="btn btn-primary">Ver mas</a>
+                        <a href="gadgets.php" class="btn btn-primary">Ver mas</a>
                     </div>
                 </div>
             </div>

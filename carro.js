@@ -1,4 +1,4 @@
-function carFunction(marcador) {
+function carFunction(marcador, add) {
     let baseDeDatos = [
         { id: 1, nombre: 'MUG LENTE CAMARA', precio: 25000, imagen: 'img/termo.jpeg' },
         { id: 2, nombre: 'LAMPARA PIÑA', precio: 13000, imagen: 'img/termoS.jpeg' },
@@ -19,11 +19,48 @@ function carFunction(marcador) {
     ]
 
     let m = marcador;
+    let i_d = add;
+
     let $carrito = document.querySelector('#carrito');
     let $total = document.querySelector('#total');
+
+
+
     anyadirCarrito(m);
 
     function anyadirCarrito(id_marc) {
+
+        if (i_d == "#a1") {
+            cont_bt += 1;
+            cont_btt = cont_bt;
+        }
+        if (i_d == "#a2") {
+            cont_bt2 += 1;
+            cont_btt = cont_bt2;
+        }
+        if (i_d == "#a3") {
+            cont_bt3 += 1;
+            cont_btt = cont_bt3;
+        }
+        if (i_d == "#a4") {
+            cont_bt4 += 1;
+            cont_btt = cont_bt4;
+        }
+        if (i_d == "#a5") {
+            cont_bt5 += 1;
+            cont_btt = cont_bt5;
+        }
+
+        let $a1 = document.querySelector(i_d);
+        $a1.textContent = '';
+        let element = document.createElement("a");
+        element.classList.add('list-group-item', 'text-center', 'mx-2');
+        element.textContent = `${cont_btt} Elementos añadidos`;
+        $a1.appendChild(element);
+        //let elementContent = document.createTextNode("dsafsadads");
+        //element.appendChild(elementContent);
+        // let currentA = document.getElementById("a1");
+        //document.body.insertBefore(element, currentA);
 
         carrito.push(id_marc);
         calcularTotal();
@@ -57,7 +94,8 @@ function carFunction(marcador) {
 
             let miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - ${miItem[0]['precio']}`;
+
+            miNodo.textContent = ` ${numeroUnidadesItem} x ${miItem[0]['nombre']} - ${miItem[0]['precio']}`;
 
 
 
@@ -80,7 +118,9 @@ function carFunction(marcador) {
         let id = this.getAttribute('item');
 
         carrito = carrito.filter(function(carritoId) {
-            return carritoId !== id;
+            if (carritoId == id) {
+                return false;
+            } else return true;
         });
 
         renderizarCarrito();
