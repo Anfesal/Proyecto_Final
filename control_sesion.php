@@ -30,7 +30,7 @@ function verificarUsuario(){
 	header("Location:home.php");
 	}else{
 		print("no existe");
-	//	header("Location:index.php?ese=23");
+		header("Location:login.php?error=true");
 	}
 }
 	?>

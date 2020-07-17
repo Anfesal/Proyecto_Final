@@ -29,34 +29,59 @@ function carFunction(marcador, add) {
     anyadirCarrito(m);
 
     function anyadirCarrito(id_marc) {
+        if (i_d !== false) {
+            if (i_d == "#a1") {
+                cont_bt += 1;
+                cont_btt = cont_bt;
+            }
+            if (i_d == "#a2") {
+                cont_bt2 += 1;
+                cont_btt = cont_bt2;
+            }
+            if (i_d == "#a3") {
+                cont_bt3 += 1;
+                cont_btt = cont_bt3;
+            }
+            if (i_d == "#a4") {
+                cont_bt4 += 1;
+                cont_btt = cont_bt4;
+            }
+            if (i_d == "#a5") {
+                cont_bt5 += 1;
+                cont_btt = cont_bt5;
+            }
+            if (i_d == "#a6") {
+                cont_bt6 += 1;
+                cont_btt = cont_bt6;
+            }
+            if (i_d == "#a7") {
+                cont_bt7 += 1;
+                cont_btt = cont_bt7;
+            }
+            if (i_d == "#a8") {
+                cont_bt8 += 1;
+                cont_btt = cont_bt8;
+            }
+            if (i_d == "#a9") {
+                cont_bt9 += 1;
+                cont_btt = cont_bt9;
+            }
+            if (i_d == "#a10") {
+                cont_bt10 += 1;
+                cont_btt = cont_bt10;
+            }
+            if (i_d == "#a11") {
+                cont_bt11 += 1;
+                cont_btt = cont_bt11;
+            }
 
-        if (i_d == "#a1") {
-            cont_bt += 1;
-            cont_btt = cont_bt;
+            let $a1 = document.querySelector(i_d);
+            $a1.textContent = '';
+            let element = document.createElement("a");
+            element.classList.add('list-group-item', 'text-center', 'mx-2');
+            element.textContent = `${cont_btt} Elementos añadidos`;
+            $a1.appendChild(element);
         }
-        if (i_d == "#a2") {
-            cont_bt2 += 1;
-            cont_btt = cont_bt2;
-        }
-        if (i_d == "#a3") {
-            cont_bt3 += 1;
-            cont_btt = cont_bt3;
-        }
-        if (i_d == "#a4") {
-            cont_bt4 += 1;
-            cont_btt = cont_bt4;
-        }
-        if (i_d == "#a5") {
-            cont_bt5 += 1;
-            cont_btt = cont_bt5;
-        }
-
-        let $a1 = document.querySelector(i_d);
-        $a1.textContent = '';
-        let element = document.createElement("a");
-        element.classList.add('list-group-item', 'text-center', 'mx-2');
-        element.textContent = `${cont_btt} Elementos añadidos`;
-        $a1.appendChild(element);
         //let elementContent = document.createTextNode("dsafsadads");
         //element.appendChild(elementContent);
         // let currentA = document.getElementById("a1");

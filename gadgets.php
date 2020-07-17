@@ -40,7 +40,13 @@
         let carrito = [];
         let total = 0;
         localStorage.c;
-        
+        let cont_bt6 = 0;
+        let cont_bt7 = 0;
+        let cont_bt8 = 0;
+        let cont_bt9 = 0;
+        let cont_bt10 = 0;
+        let cont_bt11 = 0;
+        let cont_btt = 0;
     </script>
 </head>
 
@@ -277,7 +283,8 @@
                             <li>Muy buenos acabados, que le dan realismo a la imagen.</li>
                             <li>Alta calidad.</li>
                         </ul>
-                        <button  class="btn btn-primary" onclick="carFunction(5)" >Añadir al carro</button>
+                        <button  class="btn btn-primary" onclick="carFunction(5,'#a6')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a6"> </a>
                     </div>
                 </div>
             </div>
@@ -301,7 +308,8 @@
                             <li>Ideal para llevar tus bebidas.</li>
                             <li>Diseño lente de cámara.</li>
                         </ul>
-                        <button  class="btn btn-primary" onclick="carFunction(13)" >Añadir al carro</button>
+                        <button  class="btn btn-primary" onclick="carFunction(13,'#a7')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a7"> </a>
                     </div>
                 </div>
             </div>
@@ -325,7 +333,8 @@
                             <li>Buena calidad.</li>
                             <li>No incluye base de madera ella se sostiene sola.</li>
                         </ul>
-                        <button  class="btn btn-primary" onclick="carFunction(14)" >Añadir al carro</button>
+                        <button  class="btn btn-primary" onclick="carFunction(14,'#a8')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a8"> </a>
                     </div>
                 </div>
             </div>
@@ -349,7 +358,8 @@
                             <li>Ejercer la capacidad práctica, mejorar el equilibrio, mejorar la comprensión del espacio</li>
 
                         </ul>
-                        <button  class="btn btn-primary" onclick="carFunction(15)" >Añadir al carro</button>
+                        <button  class="btn btn-primary" onclick="carFunction(15,'#a9')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a9"> </a>
                     </div>
                 </div>
             </div>
@@ -374,7 +384,8 @@
                             <li>Contiene las 6 gemas.</li>
 
                         </ul>
-                        <button  class="btn btn-primary" onclick="carFunction(16)" >Añadir al carro</button>
+                        <button  class="btn btn-primary" onclick="carFunction(16,'#a10')" >Añadir al carro</button>
+                        <a href="#carrito" id = "a10"> </a>
                     </div>
                 </div>
             </div>

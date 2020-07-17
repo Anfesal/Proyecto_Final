@@ -55,6 +55,12 @@ session_start();
         let carrito = [];
         let total = 0;
         localStorage.c;
+        let cont_bt6 = 0;
+        let cont_bt7 = 0;
+        let cont_bt8 = 0;
+        let cont_bt9 = 0;
+        let cont_bt10 = 0;
+        let cont_bt11 = 0;
         
     </script>
     
@@ -206,7 +212,7 @@ session_start();
                                                 <li>Ideal para llevar tus bebidas.</li>
                                                 <li>Diseño lente de cámara.</li>
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(1)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(1,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -257,7 +263,7 @@ session_start();
                                                 <li>Material: Plástico</li>
 
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(2)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(2,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -338,7 +344,7 @@ session_start();
                                                 <li>Diseño único.</li>
 
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(3)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(3,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -422,7 +428,7 @@ session_start();
                                                 <li>Buena calidad.</li>
                                                 <li>No incluye base de madera ella se sostiene sola.</li>
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(4)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(4,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -472,7 +478,7 @@ session_start();
                                                 <li>Muy buenos acabados, que le dan realismo a la imagen.</li>
                                                 <li>Alta calidad.</li>
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(5)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(5,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -549,7 +555,7 @@ session_start();
                                                 <li>Diseño en acero inoxidable.</li>
                                                 <li>Excelente calidad.</li>
                                             </ul>
-                                            <button  class="btn btn-primary" onclick="carFunction(6)" >Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(6,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>

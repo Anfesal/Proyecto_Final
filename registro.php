@@ -32,6 +32,7 @@ function verificarUsuario(){
 	
     } else{
         print("usuarios ya registrados");
+        header("Location:registrar.php?error=true");
     } 
     mysqli_close($mysql);
 

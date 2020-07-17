@@ -28,13 +28,20 @@
             background-color: rgb(192, 189, 189);
             color: black;
          }
-        
+         .btn_idx{
+            border-radius: 5px;
+            padding: 10px 7px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            margin: 5px;
+        }
     </style>
    <script>
         let carrito = [];
         let total = 0;
         localStorage.c;
-        
+       
     </script>
 
 <script type="text/javascript">
@@ -81,55 +88,10 @@ window.onscroll = function(){
 
             
             <br><br>
-            <button type="button"  href="index.php?ese=23" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">Ingresa</button>
+            <button class="btn_idx" onclick="location.href='login.php'">Ingresa</button>
+            <button  class="btn_idx" onclick="location.href='registrar.php'">Registrarse ahora</button>
+            <br><br>
             
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-                <div class="modal-dialog">
-
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        
-                            <h4 class="modal-title">Iniciar Sesión</h4>
-                            
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                               
-                        </div>
-                        <div class="modal-body">
-                            <form id="login-form" method="POST" role="form" style="display: block;" action="control_sesion.php">
-                            <?php
-                                if(isset($_GET['error']) && $_GET['error']==true ){
-                                print("<h4>Error:Nombre de usuario o contraseña invalido</h4><br>");
-                                    }
-                            ?>
-                                <div class="form-group">
-                                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Usuario" value="" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="contrasena" id="password" tabindex="2" class="form-control" placeholder="Contraseña" required>
-                                </div>
-                                <div class="form-group ">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <button type="submit" name="enviar_i" class="btn btn-primary">Iniciar Sesión</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <button class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal1">Registrarse ahora</button>
             <!-- Modal -->
             <div id="myModal1" class="modal fade" role="dialog">
                 <div class="modal-dialog">
@@ -270,9 +232,7 @@ window.onscroll = function(){
                                                 <li>Ideal para llevar tus bebidas.</li>
                                                 <li>Diseño lente de cámara.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <button  class="btn btn-primary" onclick="carFunction(1)" marcador="3" id="100">Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(1,false)" >Añadir al carro</button>
 
 
                                         </div>
@@ -324,9 +284,7 @@ window.onscroll = function(){
                                                 <li>Material: Plástico</li>
 
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <button  class="btn btn-primary" onclick="carFunction(2)" marcador="3" id="100">Añadir al carro</button>
+                                            <button  class="btn btn-primary" onclick="carFunction(2,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -407,9 +365,7 @@ window.onscroll = function(){
                                                 <li>Diseño único.</li>
 
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(3,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -493,9 +449,7 @@ window.onscroll = function(){
                                                 <li>Buena calidad.</li>
                                                 <li>No incluye base de madera ella se sostiene sola.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(4,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -545,9 +499,7 @@ window.onscroll = function(){
                                                 <li>Muy buenos acabados, que le dan realismo a la imagen.</li>
                                                 <li>Alta calidad.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(5,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
@@ -624,9 +576,7 @@ window.onscroll = function(){
                                                 <li>Diseño en acero inoxidable.</li>
                                                 <li>Excelente calidad.</li>
                                             </ul>
-                                            <label>Cantidad</label>
-                                            <input type="text" name="CANTIDAD" size="3" required>
-                                            <a href="#" class="btn btn-primary">Comprar</a>
+                                            <button  class="btn btn-primary" onclick="carFunction(6,false)" >Añadir al carro</button>
 
                                         </div>
                                     </div>
