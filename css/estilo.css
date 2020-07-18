@@ -81,3 +81,36 @@ footer #mapa {
     width: 100%;
     height: 180%;
 }
+
+.card-img-top:hover{
+transform: scale(1.1);
+border:solid 5px rgb(226, 94, 94);
+border-radius:5%;
+}
+.card-title:hover{
+background-color:rgb(226, 94, 94);
+font-weight: bold;
+}
+.card-text:hover{
+background-color:#ac93cf;
+font-weight: bold;
+}
+.card-body:hover > .card-title{
+background-color:rgb(226, 94, 94);
+}
+
+.card-body:hover > .card-text{
+background-color:#ac93cf;
+}
+.card-text{
+background-color:rgb(226, 94, 94);
+text-align:center;
+color:white;
+margin:0%;
+}
+.card-title{
+background-color:#ac93cf;
+text-align:center;
+color:white;
+margin:0%;
+}
