@@ -21,8 +21,10 @@ function carFunction(marcador, add) {
     let m = marcador;
     let i_d = add;
 
+
     let $carrito = document.querySelector('#carrito');
     let $total = document.querySelector('#total');
+
 
 
 

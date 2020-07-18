@@ -182,6 +182,7 @@ window.onscroll = function(){
                 <hr>
                 <!-- Precio total -->
                 <p class="text-right">Total: <span id="total"></span></p>
+              <a href="realizarcompra.php"><button  type="button" class="btn btn-info btn-md"  data-target="#term">comprar</button></a>
             </aside>
         </div>
     </div>
