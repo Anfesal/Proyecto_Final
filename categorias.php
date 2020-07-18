@@ -37,31 +37,17 @@
          }
         
     </style>
-<script type="text/javascript">
-let desplazamiento_Actual=900;
-let ubicacionPrincipal = window.pageYOffset;
-window.onscroll = function(){
-   desplazamiento_Actual=window.pageYOffset;
-   if(ubicacionPrincipal>=desplazamiento_Actual){
-       document.getElementById("nav-a").style.top="0";
-    }
-    else{
-         document.getElementById("nav-a").style.top="-100px";
 
-    }
-    ubicacionPrincipal=desplazamiento_Actual;
-}
-</script>
 </head>
 
 <body>
-   <nav id="nav-a" class="navbar fixed-top navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="index.php"></a>
+        
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            
+        <a class="navbar-brand" href="index.php"><img src="img/logo.PNG" alt="" width="113" height="64"></a>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item ">
                 <?php 
